@@ -5,6 +5,7 @@ import com.elspy.psetrading.stockprice.dto.commands.CreateStockDTO;
 import java.util.concurrent.CompletableFuture;
 
 public interface StockCommandService {
-    public CompletableFuture<String> createStock(CreateStockDTO createStockDTO);
+    CompletableFuture<String> createStock(CreateStockDTO createStockDTO);
 
+    CompletableFuture<String> tickedPrice(String stockCode, Double price);
 }
